@@ -1,0 +1,136 @@
+/* 
+    --- Styles for my first Wordpress site, site-01!
+
+    Name: First Theme;
+    Author: Wilson;
+    Date: Jun. 25, 2024;
+*/
+
+/* Universal: */
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html
+    {
+        margin: 0 !important; /* Wordpress is trolling me. */
+    }
+/* :Universal */
+
+/* Unordered Elements / Typography: */
+    p
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    h2.title
+    {
+        font-size: 2em;
+    }
+/* :Unordered Elements / Typography */
+
+/* Unordered Elements / Misc: */
+    .meta span 
+    {
+        display: block;
+    }
+
+    /* Comment Form: */
+        label
+        {
+            display: block;
+        }
+        .comment-form-cookies-consent label
+        {
+            display: inline;
+        }
+        .comment-form p
+        {
+            margin-bottom: 10px;
+        }
+        #commentform
+        {
+            border: 1px solid tan;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .comment-notes
+        {
+            font-size: .9em;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        ol.commentlist
+        {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+    /* :Comment Form */
+/* :Unordered Elements / Misc */
+
+/* Ordered Elements: */
+    body
+    {
+        background-color: beige;
+    }
+
+
+
+    header
+    {
+        background-color: yellow;
+    }
+    header #top
+    {
+        background-color: orange;
+
+        height: 60px;
+    }
+    header #inner-header
+    {
+        max-width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+
+        background-color: blue;
+    }
+    header #hero
+    {
+        height: 400px;
+        background-color: red;
+    }
+
+
+
+    #wrapper
+    {
+        max-width: 1200px;
+        margin: 20px auto;
+
+        overflow: hidden;
+    }
+    #wrapper main
+    {
+        width: 62%;
+        
+        float:left;
+    }
+
+
+
+    footer
+    {
+        background-color: lightgray;
+
+        height: 300px;
+
+        clear: both;
+    }
+/* :Ordered Elements */
