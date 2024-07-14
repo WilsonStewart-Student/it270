@@ -1,32 +1,34 @@
-/* 
-    --- Styles for my first Wordpress site, site-01!
+/* >>> Styles for my first Wordpress site, site-01!
 
     Name: First Theme;
     Author: Wilson;
     Date: Jun. 25, 2024;
+
 */
 
-/* Universal: */
+/* 
+--- █▀ ▀█▀ ▄▀█ █▄░█ █▀▄ ▄▀█ █▀█ █▀▄
+--- ▄█ ░█░ █▀█ █░▀█ █▄▀ █▀█ █▀▄ █▄▀ 
+*/
+
+/* --- Universal: */
     *
     {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
     }
-
-    html
-    {
-        margin: 0 !important; /* Wordpress is trolling me. */
-    }
 /* :Universal */
 
-/* Unordered Elements / Typography: */
-    p
+/* --- Unordered Elements / Typography: */
+    p, h1, h2, h3
     {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
-
-
+    #wrapper > p:last-of-type
+    {
+        margin-bottom: 0;
+    }
 
     h2.title
     {
@@ -34,13 +36,49 @@
     }
 /* :Unordered Elements / Typography */
 
-/* Unordered Elements / Misc: */
+/* --- Unordered Elements / Misc: */
     .meta span 
     {
         display: block;
     }
+    .meta
+    {
+        margin-bottom: 10px;
+    }
 
-    /* Comment Form: */
+
+
+    /* >>> Post Thumbnails and Post Images: */
+        .thumbnail .wp-post-image
+        {
+            height: 200px;
+            width: auto;
+
+            margin-bottom: 10px;
+        }
+
+        .thumbnail-fullsize .wp-post-image
+        {
+            max-width: 100%;
+
+            margin-bottom: 10px;
+        }
+    /* :Post Thumbnails and Post Images */
+
+
+
+    .post
+    {
+        margin-bottom: 10px;
+    }
+    .post:last-of-type
+    {
+        margin-bottom: 0;
+    }
+
+
+
+    /* >>> Comment Form: */
         label
         {
             display: block;
@@ -73,12 +111,30 @@
             margin: 10px 0;
         }
     /* :Comment Form */
+
+
+
+    /* >>> Non-Header Search */
+        #searchform
+        {
+            margin-bottom: 10px;
+        }
+    /* :Non-Header Search */
+
+
+
+    .error404 li
+    {
+        list-style-type: none;
+    }
 /* :Unordered Elements / Misc */
 
-/* Ordered Elements: */
+/* --- Ordered Elements: */
     body
     {
         background-color: beige;
+
+        height: 100vh;
     }
 
 
@@ -86,41 +142,177 @@
     header
     {
         background-color: yellow;
-    }
-    header #top
-    {
-        background-color: orange;
 
-        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
-    header #inner-header
-    {
-        max-width: 1200px;
-        height: 100px;
-        margin: 0 auto;
 
-        background-color: blue;
-    }
-    header #hero
-    {
-        height: 400px;
-        background-color: red;
-    }
+    /* >>> Search Form: */
+        header #top
+        {
+            background-color: orange;
+
+            padding: 10px;
+
+            overflow: hidden;
+        }
+
+        #top #searchform
+        {
+            float: right;
+            margin-bottom: 0;
+        }
+        input#s
+        {
+            border: outset 2.5px lightgray;
+            border-radius: 0;
+
+            padding: 2.5px;
+        }
+        input#searchsubmit
+        {
+            border: outset 2.5px lightgray;
+            border-radius: 0;
+
+            padding: 2.5px;
+        }
+    /* :Search Form */
+    
+    /* >>> Navigation: */
+        header #inner-header
+        {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 15px;
+
+            background-color: tan;
+        }
+
+        .nav-button
+        {
+            display: none;
+        }
+
+        #site-navigation
+        {
+            float: right;
+        }
+        #site-navigation li
+        {
+            list-style-type: none;
+
+            margin-left: 15px;
+    
+            float: left;
+            position: relative;
+        }
+        /* #site-navigation .primary-nav > li:last-child
+        {
+            margin-right: 15px;
+        } */
+
+        #site-navigation li a, .sub-menu li a
+        {
+            text-decoration: none;
+        }
+
+        .sub-menu
+        {
+            display: none;
+        }
+        #site-navigation .primary-nav > li:hover .sub-menu
+        {
+            display: block;
+    
+            position: absolute;
+
+            padding-top: 5px;
+    
+            width: max-content;
+        }
+        #site-navigation li:hover .sub-menu li 
+        {
+            background-color: white;
+
+            padding: 5px;
+            margin-left: 0;
+            margin-bottom: 0;
+    
+            float: none;
+        }
+        #site-navigation li:hover .sub-menu li:hover
+        {
+            background-color: lightgray;
+        }
+    /* :Navigation */
+
+    /* >>> Hero: */
+        #hero img
+        {
+            display: none;
+        }
+
+        .home #hero
+        {
+            background-image: url(https://wilsonstew.art/it270/site-01-public/wp-content/uploads/yellowstone-header-home.jpg);
+    
+            background-attachment: fixed;
+            background-size: 100%;
+            background-position: 0 100px;
+            min-height: 495px;
+            max-width: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .inner-page #hero
+        {
+            /* height: 400px; */
+            background-color: red;
+    
+            background-image: url(https://wilsonstew.art/it270/site-01-public/wp-content/uploads/yellowstone-inner.jpg);
+    
+            background-attachment: fixed;
+            background-size: 100%;
+            background-position: 0 100px;
+            min-height: 350px;
+            max-width: 100%;
+            background-repeat: no-repeat;
+        }
+    /* Hero: */
 
 
 
     #wrapper
     {
         max-width: 1200px;
+        padding: 0 10px;
         margin: 20px auto;
 
         overflow: hidden;
     }
+
     #wrapper main
     {
         width: 62%;
         
-        float:left;
+        float: left;
+    }
+    #wrapper aside
+    {
+        background-color: lightgray;
+
+        width: 35%;
+        height: 400px; /* Temporary. */
+
+        float: right;
+    }
+
+    .error404 #wrapper, .search #wrapper
+    /* Adjusted to account for fixed header, width of 120.6px. */
+    {
+        margin: 140.6px auto 20px auto;
     }
 
 
@@ -128,9 +320,218 @@
     footer
     {
         background-color: lightgray;
-
-        height: 300px;
-
+        
+        height: 60px;
+        
         clear: both;
+
+        box-shadow: 0 50vh 0 50vh lightgray;
     }
 /* :Ordered Elements */
+
+
+/*
+--- █▀▄▀█ █▀▀ █▀▄ █ ▄▀█   █▀█ █░█ █▀▀ █▀█ █ █▀▀ █▀
+--- █░▀░█ ██▄ █▄▀ █ █▀█   ▀▀█ █▄█ ██▄ █▀▄ █ ██▄ ▄█ 
+*/
+
+@media only screen and (max-width: 1417px)
+/* Inner Page Hero */
+{
+    /* >>> Hero: */
+        .inner-page #hero
+        {
+            background-image: none;
+            background-color: green;
+
+            margin-top: 100px;
+            min-height: auto;
+        }
+
+        .inner-page #hero img
+        {
+            display: block;
+            max-width: 100%;
+        }
+    /* :Hero */
+}
+
+@media only screen and (max-width: 1260px)
+/* Home Page Hero */
+{
+    /* >>> Hero: */
+        .home #hero
+        {
+            background-image: none;
+
+            margin-top: 100px;
+            min-height: auto;
+        }
+
+        .home #hero img
+        {
+            display: block;
+            max-width: 100%;
+        }
+    /* :Hero */
+}
+
+@media only screen and (max-width: 700px) 
+{
+    .nav-button {
+		display: block;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		width: 50px;
+		height: 35px;
+		background: url('images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+		cursor: pointer;
+		border: 0 none;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
+		border-radius: 5px;
+		z-index: 999;
+		text-indent: -9999px;
+	}
+	.nav-button:hover {
+		background-color: rgba(0,0,0,.1);
+	}
+	.nav-button.open {
+		background: url('images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+	}
+
+	/* Navigation Bar
+	-------------------------------------------------------- */
+
+	body { padding-top: 50px; }
+
+	.primary-nav {
+		width: 100%;
+		float: none;
+		background-color: #238be3; /* change the menu color */
+		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		display: block;
+		height: 50px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		box-shadow: 0 1px 2px rgba(0,0,0,.6);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 998;
+		clear: both;
+	}
+	.primary-nav li {
+		display: none;
+		width: 100%;
+		font-family: Arial;
+	}
+
+        /* >>> Mine: */
+        #site-navigation .primary-nav li
+        {
+            margin-left: 0;
+            float: none;
+        }
+
+        #site-navigation .primary-nav > li:hover .sub-menu
+        {
+            /* display: block; */
+    
+            position: static;
+
+            padding-top: 0;
+    
+            width: 100%;
+        }
+        #site-navigation li:hover .sub-menu li 
+        {
+            background-color: transparent;
+
+            padding: 0px;
+            /* margin-left: 0;
+            margin-bottom: 0; */
+    
+            /* float: none; */
+        }
+        #site-navigation li:hover .sub-menu li:hover
+        {
+            background-color: transparent;
+        }
+
+        #top
+        {
+            margin-top: 50px;
+        }
+    /* >>> :Mine */
+
+	.primary-nav li a {
+		display: block;
+		width: 100%;
+		padding: 10px 5%;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+		border-top: 1px solid rgba(255,255,255,.1);
+	}
+	.primary-nav li a:hover {
+		background-color: rgba(0,0,0,.5);
+		border-top-color: transparent;
+	}
+	.primary-nav > li:first-child {
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+
+	/* Toggle the navigation bar open  */
+
+	.primary-nav.open {
+		height: auto;
+		padding-top: 50px;
+	}
+	.primary-nav.open li {
+		display: block;
+	}
+
+	/* Submenus – optional .parent class indicates dropdowns */
+
+	.primary-nav > li:hover > a {
+		background: rgba(0,0,0,.5);
+		border-bottom-color: transparent;
+	}
+	.primary-nav li.parent > a:after {
+		content: "▼";
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+	.primary-nav li.parent > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+	.primary-nav li ul {
+		display: none;
+		background: rgba(0,0,0,.5);
+		border-top: 0 none;
+		padding: 0;
+	}
+	.primary-nav li ul a {
+		border: 0 none;
+		font-size: 12px;
+		padding: 10px 5%;
+		font-weight: normal;
+	}
+	.primary-nav li:hover ul {
+		display: block;
+		border-top: 0 none;
+	}
+}
+

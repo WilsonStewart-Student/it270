@@ -2,6 +2,10 @@
 
 <?php get_header(); ?>
 
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-inner.jpg" alt="Yellowstone.">
+</div> <!-- End "hero". -->
+
     <div id="wrapper">
         <main>
         <?php
@@ -29,6 +33,14 @@
                         </span>
                     </div> <!-- End "meta". -->
 
+                    <div class="thumbnail-fullsize">
+                        <?php 
+                        if (has_post_thumbnail()) { ?>
+                            <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); } ?>
+                            </a>
+                    </div> <!-- End "thumbnail-fullszie". -->
+
                     <?php
                     // >>> Post Content.
                     the_content();
@@ -50,6 +62,7 @@
         </main>
 
         <aside>
+            <h2> This is my single.php page. </h2>
         </aside>
     </div> <!-- End "wrapper". -->
 

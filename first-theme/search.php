@@ -2,16 +2,22 @@
 
 <?php get_header(); ?>
 
-<div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-inner.jpg" alt="Yellowstone.">
-</div> <!-- End "hero". -->
-
     <div id="wrapper">
         <main>
         <?php
         // >>> If we have posts to display, display them!
             if (have_posts()) 
             {
+                // >>> If the user gets search results, we will add a happy picture!
+                ?>
+                <h2> Search Results For: <?php echo get_search_query(); ?> </h2>
+
+                <p>Our findings for
+                <?php /* Search Count */
+                $allsearch = new WP_Query("s=$s&showposts=-1"); $key = esc_html($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles/pages'); wp_reset_query(); ?></p>
+
+                <?php
+                
                 while (have_posts()) 
                 {
                     // >>> Post.
@@ -63,10 +69,9 @@
         // >>> Otherwise, tell the user no posts were found.
             else
             {
-                echo '<h2>';
-                // echo wpautop('Sorry, no posts were found!');
-                echo 'Search Results';
-                echo '</h2>';
+                ?>
+                <h2> No Content For: <?php echo get_search_query(); ?> </h2>
+                <?php
                 echo '<p>';
                 echo 'Sorry, we could not find anything resembling your search terms. Would you like to search again using different keywords?';
                 get_search_form();
@@ -76,7 +81,7 @@
         </main>
 
         <aside>
-            <h2> This is my index.php page. </h2>
+            <h2> This is my search.php page. </h2>
         </aside>
     </div> <!-- End "wrapper". -->
 

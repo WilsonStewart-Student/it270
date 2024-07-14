@@ -1,13 +1,14 @@
-<!-- --- The front-page.php is assigned to the home page. -->
+<!-- --- The page-tours.php is assigned to tours pages. -->
 
 <?php get_header(); 
-// Template Name: Front Page ?>
+// Template Name: Tours Page ?>
 
 <div id="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-header-home.jpg" alt="Yellowstone.">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-inner.jpg" alt="Yellowstone.">
 </div> <!-- End "hero". -->
 
     <div id="wrapper">
+        <main>
         <?php
         // >>> If we have posts to display, display them!
             if (have_posts()) 
@@ -27,6 +28,11 @@
                 echo '</h2>';
             }
         ?>
+        </main>
+
+        <aside>
+            <h2> This is my page-tours.php page. </h2>
+        </aside>
     </div> <!-- End "wrapper". -->
 
 <?php get_footer(); ?>
