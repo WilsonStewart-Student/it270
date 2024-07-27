@@ -59,8 +59,9 @@
         ?>
 
         <div class="next-previous">
-        <?php (previous_post_link()) ? '%link' : ''; ?> &nbsp; &nbsp; <?php (next_post_link()) ? '%link' : ''; ?>
-        </div>
+            <span class="previous-post"> <?php echo previous_post_link() ?> </span>
+            <span class="next-post"> <?php echo next_post_link() ?> </span>
+        </div> <!-- End "next-previous". -->
         
         </main>
 

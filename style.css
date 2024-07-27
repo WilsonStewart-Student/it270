@@ -6,7 +6,7 @@
 
 */
 
-/* I need to clean this up sfhiuhsgiushfdbiuhiaugdijhjhk */
+/* i said i would clean this up i lied  */
 
 /* 
 --- █▀ ▀█▀ ▄▀█ █▄░█ █▀▄ ▄▀█ █▀█ █▀▄
@@ -28,7 +28,7 @@
 /* :Universal */
 
 /* --- Unordered Elements / Typography: */
-    p, h1, h2, h3
+    p, h1, h2, h3, main li:last-child
     {
         margin-bottom: 10px;
     }
@@ -134,6 +134,17 @@
         }
     /* :Comment Form */
 
+    /* Comments */
+        .comment
+        {
+            margin-bottom: 10px;
+        }
+        .comment:last-of-type
+        {
+            margin-bottom: 10px;
+        }
+    /* :Comments */
+
 
 
     /* >>> Non-Header Search */
@@ -198,6 +209,7 @@
         input#searchsubmit
         {
             border: outset 2.5px lightgray;
+            background-color: lightgray;
             border-radius: 0;
 
             padding: 2.5px;
@@ -256,7 +268,7 @@
         }
         #site-navigation li:hover .sub-menu li 
         {
-            background-color: white;
+            background-color: rgb(245, 245, 245);
 
             padding: 5px;
             margin-left: 0;
@@ -311,8 +323,12 @@
 
         overflow: hidden;
     }
+    .contact #wrapper
+    {
+        max-width: 1000px;
+    }
 
-    #wrapper main
+    main
     {
         width: 62%;
         
@@ -368,11 +384,15 @@
         overflow: hidden;
         margin-bottom: 20px;
     }
-    .row:last-of-type
+    #wrapper .row:last-of-type
     {
         margin-bottom: 0;
     }
 
+    #wrapper .third
+    {
+        padding: 0;
+    }
     .third
     {
         width: 31.91%;
@@ -383,23 +403,20 @@
 
         float:left;
     }
-    #wrapper .third
-    {
-        padding: 0;
-    }
     .third:last-of-type
     {
         margin-right: 0;
     }
+
     .third img
     {
         width: 100%;
     }
+
     .third p, .col-8 p
     {
         margin-bottom: 0;
     }
-
     .third img, .col-8 img
     {
         margin-bottom: 10px;
@@ -417,12 +434,21 @@
     .col-8:last-of-type
     {
         float: right;
-    }
+    } 
 
 
     .next-previous
     {
         margin-top: 10px;
+        overflow: hidden;
+    }
+    .previous-post
+    {
+        float: left;
+    }
+    .next-post
+    {
+        float: right;
     }
 /* :Ordered Elements */
 
@@ -449,6 +475,31 @@ aside h3
 .inner-widget, .inner-tours, .inner-about, .inner-buy
 {
     background-color: lightgray;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inner-widget .frm_forms
+{
+    padding: 10px;
+}
+.frm_button_submit
+{
+    border: 1px solid #900 !important;
+    background-color: #900 !important;
+}
+.frm_button_submit:hover
+{
+    background-color: white !important;
+}
+.frm_fields_container > div:nth-of-type(3)
+{
+    margin-bottom: 0 !important;
+    height: min-content !important;
+}
+fieldset
+{
+    padding-bottom: 0px !important;
 }
 
 .widget_text .inner-specials
@@ -486,6 +537,12 @@ aside h3
     text-align: center;
 }
 
+/* --- page */
+
+body.contact h1
+{
+    text-align: center;
+}
 
 
 /*
@@ -531,11 +588,141 @@ aside h3
             display: block;
             max-width: 100%;
         }
+
+
+        /* body
+        {
+            background-color: orange;
+        } */
     /* :Hero */
+}
+
+@media only screen and (max-width: 900px)
+{
+    /* body
+    {
+        background-color: lightcyan;
+    } */
+
+    .row
+    {
+        margin-bottom: 0;
+    }
+
+    .third
+    {
+        float: none;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .third:last-of-type
+    {
+        margin-bottom: 0;
+    }
+
+    .col-8
+    {
+        float: none;
+        width: 100%;
+    }
+    .col-8 img
+    {
+        width: 100%;
+    }
+    .col-8:last-of-type
+    {
+        float: none;
+    }
+
+    .third p, .col-8 p
+    {
+        margin-bottom: 10px;
+        /* margin-top: There is a p around my images here because WordPress puts it there. I have no say in the matter */
+    }
+    .third p img
+    {
+        margin-bottom: -10px;
+    }
+
+    /*
+    .third:last-of-type
+    {
+        margin-bottom: 0;
+    }
+
+    .col-8
+    {
+        float: left;
+        width: 100%;
+    }
+    .col-8 img
+    {
+        width: 100%;
+    }
+    .col-8:last-of-type
+    {
+        float: right;
+    } */
+
+    main
+    {
+        width: 60%;
+    }
+    aside
+    {
+        width: 37%;
+    }
 }
 
 @media only screen and (max-width: 700px) 
 {
+
+
+    #inner-header
+    {
+        text-align: center;
+    }
+
+    body
+    {
+        font-size: 93%;
+    }
+
+    .inner-page #hero img 
+    {
+        display: none;
+    }
+    .inner-page #hero
+    {
+        padding-bottom: 18px;
+        background-color: transparent;
+    }
+
+    main, aside
+    {
+        float: none;
+        width: 100%;
+    }
+
+    aside
+    {
+        margin-top: 10px;
+    }
+
+
+
+    footer li
+    {
+        float: none;
+        margin-right: 0;
+    }
+
+
+
+
+
     .nav-button {
 		display: block;
 		position: absolute;
@@ -691,5 +878,21 @@ aside h3
 		display: block;
 		border-top: 0 none;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 

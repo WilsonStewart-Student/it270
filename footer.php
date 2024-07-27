@@ -29,6 +29,8 @@
         document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
 
+	<?php wp_footer(); ?>
+
 </body>
 
 </html>
