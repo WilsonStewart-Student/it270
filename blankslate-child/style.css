@@ -1,0 +1,131 @@
+/*
+ Theme Name:   Blank Slate [Child Theme]
+ description:  A child theme of Blank Slate.
+ Author:       Wilson Stewart
+ Template:     blankslate
+ Version:      1.0.0
+*/
+
+h1
+{
+    color: red; 
+    
+    font-size: 2em;
+}
+
+p
+{
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+img, p img
+{
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+/* --- */
+
+body
+{
+    background-color: lightgray;
+}
+
+
+
+header#header
+{
+    background-color: tan;
+
+    width: 200px;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#logo
+{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.menu
+{
+    margin-left: 12px;
+}
+.menu li a
+{
+    line-height: 1.25;
+
+    text-decoration: none;
+}
+
+
+
+#wrapper
+{
+    max-width: 1200px;
+    margin: 100px 0 60px 220px;
+}
+
+
+
+#content
+/* (Main) */
+{
+    background-color: beige;
+
+    width: 63%;
+
+    float: left;
+}
+#sidebar
+/* (Aside) */
+{
+    /* background-color: lightpink; */
+
+    width: 35%;
+
+    float: right;
+}
+#sidebar p
+{
+    font-size: .9em;
+}
+.inner-widget h3
+{
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+img + h1
+{
+    margin: 12px 0 10px 0;
+}
+h3 + img
+{
+    margin: 10px 0 50px 0;
+}
+
+
+
+footer
+{
+    clear: both;
+}
+
+/* --- */
+
+/* National Site */
+.website-1 .home h1
+{
+    font-size: 3em;
+}
+
+/* Seattle Site. */
+.website-2 .home h1
+{
+    font-size: 2em;
+}
